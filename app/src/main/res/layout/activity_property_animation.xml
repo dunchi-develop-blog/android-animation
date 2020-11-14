@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".PropertyAnimationActivity">
 
+    <TextView
+        android:id="@+id/propertyView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#cee5d5"
+        android:text="눌러보세요"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/propertyFadeIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="propertyFadeIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/propertyFadeOut"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/propertyFadeOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="propertyFadeOut"
+        app:layout_constraintStart_toEndOf="@id/propertyFadeIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
