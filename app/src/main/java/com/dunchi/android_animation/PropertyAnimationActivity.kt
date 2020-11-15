@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_property_animation.*
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_property_animation)
 
-
         propertyFadeIn.setOnClickListener(fadeInClickListener)
         propertyFadeOut.setOnClickListener(fadeOutClickListener)
     }
