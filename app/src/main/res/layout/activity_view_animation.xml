@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".ViewAnimationActivity">
 
+    <TextView
+        android:id="@+id/viewView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#cee5d5"
+        android:text="viewAnim"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/viewFadeIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="viewFadeIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/viewFadeOut"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/viewFadeOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="viewFadeOut"
+        app:layout_constraintStart_toEndOf="@id/viewFadeIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
