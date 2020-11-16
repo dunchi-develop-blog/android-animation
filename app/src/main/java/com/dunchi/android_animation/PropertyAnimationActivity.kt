@@ -5,6 +5,7 @@ import android.animation.AnimatorSet
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_property_animation.*
 
  class PropertyAnimationActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_property_animation.*
 
         propertyFadeIn.setOnClickListener(fadeInClickListener)
         propertyFadeOut.setOnClickListener(fadeOutClickListener)
+        propertyView.setOnClickListener(viewClickListener)
     }
 
      val fadeInClickListener : View.OnClickListener = View.OnClickListener {
@@ -27,5 +29,9 @@ import kotlinx.android.synthetic.main.activity_property_animation.*
          var anim = AnimatorInflater.loadAnimator(applicationContext,R.animator.fade_out) as AnimatorSet
          anim.setTarget(propertyView)
          anim.start()
+     }
+
+     val viewClickListener : View.OnClickListener = View.OnClickListener {
+         Toast.makeText(applicationContext, "View가 눌렸습니다!",Toast.LENGTH_SHORT).show()
      }
 }
