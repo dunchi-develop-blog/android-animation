@@ -14,10 +14,16 @@ import kotlinx.android.synthetic.main.activity_property_animation.*
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_property_animation)
 
+        propertyView.setOnClickListener(viewClickListener)
         propertyFadeIn.setOnClickListener(fadeInClickListener)
         propertyFadeOut.setOnClickListener(fadeOutClickListener)
-        propertyView.setOnClickListener(viewClickListener)
+        propertyTranX.setOnClickListener(tranXClickListener)
+        propertyTranY.setOnClickListener(tranYClickListener)
     }
+
+     val viewClickListener : View.OnClickListener = View.OnClickListener {
+         Toast.makeText(applicationContext, "View가 눌렸습니다!",Toast.LENGTH_SHORT).show()
+     }
 
      val fadeInClickListener : View.OnClickListener = View.OnClickListener {
          var anim = AnimatorInflater.loadAnimator(applicationContext,R.animator.fade_in) as AnimatorSet
@@ -31,7 +37,15 @@ import kotlinx.android.synthetic.main.activity_property_animation.*
          anim.start()
      }
 
-     val viewClickListener : View.OnClickListener = View.OnClickListener {
-         Toast.makeText(applicationContext, "View가 눌렸습니다!",Toast.LENGTH_SHORT).show()
+     val tranXClickListener : View.OnClickListener = View.OnClickListener {
+         var anim = AnimatorInflater.loadAnimator(applicationContext,R.animator.fade_in) as AnimatorSet
+         anim.setTarget(propertyView)
+         anim.start()
      }
-}
+
+     val tranYClickListener : View.OnClickListener = View.OnClickListener {
+         var anim = AnimatorInflater.loadAnimator(applicationContext,R.animator.fade_in) as AnimatorSet
+         anim.setTarget(propertyView)
+         anim.start()
+     }
+ }
