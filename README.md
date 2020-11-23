@@ -3,4 +3,8 @@
 
 Animation 목록
 1. Property Animation
+ - fade in, out
+ - trans x, y
 2. View Animation
+ - fade in, out
+ - trans x, y
